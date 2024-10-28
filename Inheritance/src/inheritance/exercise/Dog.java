@@ -10,22 +10,6 @@ public class Dog extends Animal {
         this.size = size;
     }
 
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
     @Override
     public String toString() {
         return "Dog{" +
