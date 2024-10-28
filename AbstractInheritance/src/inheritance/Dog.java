@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements WalkAnimal {
     public String breed;
     public String size;
 
@@ -21,5 +21,10 @@ public class Dog extends Animal {
     @Override
     public void noise() {
         System.out.println("woof woof");
+    }
+
+    @Override
+    public void goOnAWalk() {
+        System.out.println("We go on a walk!");
     }
 }

@@ -15,5 +15,7 @@ public class Main {
             animal.noise();
         }
 
+        animal1.goOnAWalk();
+
     }
 }

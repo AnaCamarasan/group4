@@ -1,5 +1,7 @@
 package inheritance.exercise;
 
+import inheritance.WalkAnimal;
+
 public class Animal {
     public String name;
     public int noOfLegs;
