@@ -20,6 +20,21 @@ public class Main {
             System.out.println(car);
         }
 
+        // StringBuilder
+        String string1 = "Hello";
+        String string2 = "World";
+        StringBuilder sb = new StringBuilder();
+        sb.append(string1);
+        System.out.println(sb);
+        sb.insert(5, string2);
+        System.out.println(sb);
+        sb.replace(5, 6, " W" );
+        System.out.println(sb);
+        sb.delete(0, 6);
+        System.out.println(sb);
+        System.out.println(sb.toString());
+
+
     }
 
 }
