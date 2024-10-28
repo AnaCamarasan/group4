@@ -1,7 +1,10 @@
 package two.constructors;
 
+import java.util.ArrayList;
+
 public class Car {
 
+    private static final ArrayList<Car> allCars = new ArrayList<>();
     private String model;
     private String brand;
     private int year;
@@ -10,6 +13,7 @@ public class Car {
         this.model = model;
         this.brand = brand;
         this.year = year;
+        allCars.add(this);
     }
 
     public Car(String model, String brand) {
@@ -47,5 +51,9 @@ public class Car {
                 ", brand='" + brand + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    public ArrayList<Car> returnList() {
+       return allCars;
     }
 }
