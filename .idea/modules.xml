@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GoingFutherWithClasses/GoingFutherWithClasses.iml" filepath="$PROJECT_DIR$/GoingFutherWithClasses/GoingFutherWithClasses.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Group4.iml" filepath="$PROJECT_DIR$/.idea/Group4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringsArgs/StringsArgs.iml" filepath="$PROJECT_DIR$/StringsArgs/StringsArgs.iml" />
     </modules>
   </component>
 </project>
