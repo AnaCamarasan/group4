@@ -34,7 +34,22 @@ public class Main {
         System.out.println(sb);
         System.out.println(sb.toString());
 
+        // Multi dimensional arrays
+        Car[][] carMatrix = {{car1, car2}, {car3, car4}};
 
+        for (int i = 0; i < carMatrix.length; i++) {
+            for (int j = 0; j < carMatrix[i].length; j++) {
+                System.out.println(carMatrix[i][j]);
+            }
+            System.out.println();
+        }
+
+        for (Car[] matrix : carMatrix) {
+            for (Car car : matrix) {
+                System.out.println(car);
+            }
+            System.out.println();
+        }
     }
 
 }
