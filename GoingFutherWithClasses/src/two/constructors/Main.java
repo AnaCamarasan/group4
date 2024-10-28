@@ -10,7 +10,7 @@ public class Main {
         Car car2 = new Car("Golf", "Volkswagen");
         System.out.println(car2);
 
-        ArrayList<Car> printCars = car1.returnList();
+        ArrayList<Car> printCars = car1.getAllCars();
         System.out.println("ALL RECORDED CARS:");
         for (int x = 0; x < printCars.size(); x++){
             System.out.println(printCars.get(x).toString());

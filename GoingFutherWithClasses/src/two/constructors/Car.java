@@ -53,7 +53,7 @@ public class Car {
                 '}';
     }
 
-    public ArrayList<Car> returnList() {
+    public ArrayList<Car> getAllCars() {
        return allCars;
     }
 }
