@@ -50,6 +50,27 @@ public class Main {
             }
             System.out.println();
         }
+
+        for (int i = 0; i < carMatrix.length; i++) {
+            for (int j = 0; j < carMatrix[i].length; j++) {
+                if (i == 1 && j == 1) {
+                    carMatrix[i][j].setModel("CHANGE IT UP");
+                }
+                System.out.println(carMatrix[i][j]);
+            }
+            System.out.println();
+        }
+
+        for (Car[] matrix : carMatrix) {
+            for (Car car : matrix) {
+                if (car.getBrand().equals("Audi")) {
+                    car.setBrand("CHANGE NO 2");
+                }
+                System.out.println(car);
+            }
+            System.out.println();
+        }
+
     }
 
 }
