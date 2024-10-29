@@ -6,8 +6,8 @@ public class Car extends Vehicle {
     private boolean isManual;
 
 
-    public Car(int noOfWheels, int numOfDoors, boolean isManual) {
-        super("car", noOfWheels);
+    public Car(int noOfWheels, boolean isBroken, int numOfDoors, boolean isManual) {
+        super("car", noOfWheels, isBroken);
         this.numOfDoors = numOfDoors;
         this.isManual = isManual;
     }

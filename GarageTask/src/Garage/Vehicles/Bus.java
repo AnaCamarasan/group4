@@ -5,8 +5,8 @@ public class Bus extends Vehicle {
     private int numOfSeats;
     private int routeNumber;
 
-    public Bus(int noOfWheels, int numOfSeats, int routeNumber) {
-        super("bus", noOfWheels);
+    public Bus(int noOfWheels, boolean isBroken, int numOfSeats, int routeNumber) {
+        super("bus", noOfWheels, isBroken);
         this.numOfSeats = numOfSeats;
         this.routeNumber = routeNumber;
     }

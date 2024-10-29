@@ -6,8 +6,8 @@ public class Motorbike extends Vehicle {
 
     private String engineSize;
 
-    public Motorbike(int noOfWheels, int noOfGears, String engineSize) {
-        super("motorbike", noOfWheels);
+    public Motorbike(int noOfWheels, boolean isBroken, int noOfGears, String engineSize) {
+        super("motorbike", noOfWheels, isBroken);
         this.noOfGears = noOfGears;
         this.engineSize = engineSize;
     }
