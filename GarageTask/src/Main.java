@@ -12,5 +12,13 @@ public class Main {
         System.out.println(car2);
         System.out.println(bike1);
         System.out.println(bus1);
+
+        Garage myGarage = new Garage();
+        myGarage.addVehicle(car1);
+        myGarage.addVehicle(car2);
+        myGarage.addVehicle(bike1);
+        myGarage.addVehicle(bus1);
+
+        myGarage.calculateBill();
     }
 }
