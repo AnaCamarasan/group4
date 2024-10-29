@@ -110,10 +110,67 @@ public class Main {
     }
 
     public static void productsMenu() {
-        // CREATE
-        // READ
-        // UPDATE
-        // DELETE
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n\tPRODUCT MENU:");
+        System.out.println("Would you like to: \n\tADD a product (A) \n\tFIND a product (F) " +
+                "\n\tUPDATE a product (U) \n\tDELETE a product (D) \n\tRETURN to the main menu (R)");
+        String userInput = scanner.nextLine();
+        String givenOption;
+        switch (userInput.toLowerCase().trim()){
+
+            case "a": // CREATE
+                inventory.addProduct();
+                productsMenu();
+                break;
+
+            case "f": // READ
+                System.out.println("View ALL products (A) or Individual (type in their ID):");
+                givenOption = scanner.nextLine();
+                if (givenOption.equalsIgnoreCase("a")) {
+                    System.out.println(inventory);
+                } else {
+                    try {
+                        System.out.println(inventory.getProduct(Integer.parseInt(givenOption)));
+                    } catch (NumberFormatException e) {
+                        System.out.println("INVALID PRODUCT ID");
+                    }
+                }
+                System.out.println("PRESS ENTER TO CONTINUE");
+                scanner.nextLine();
+                productsMenu();
+                break;
+
+            case "u": // UPDATE
+                System.out.print("Input the product's ID that you want to UPDATE: ");
+                givenOption = scanner.nextLine();
+                try {
+                    inventory.updateProduct(Integer.parseInt(givenOption));
+                } catch (NumberFormatException e) {
+                    System.out.println("INVALID CUSTOMER ID");
+                }
+                productsMenu();
+                break;
+
+            case "d": // DELETE
+                System.out.print("Input the product's ID that you want to DELETE: ");
+                givenOption = scanner.nextLine();
+                try {
+                    inventory.deleteProduct(Integer.parseInt(givenOption));
+                } catch (NumberFormatException e) {
+                    System.out.println("INVALID PRODUCT ID");
+                }
+                productsMenu();
+                break;
+
+            case "r":
+                mainMenu();
+                break;
+
+            default:
+                System.out.println("INVALID INPUT. PLEASE INPUT A VALID OPTION.");
+                productsMenu();
+                break;
+        }
     }
 
 }
