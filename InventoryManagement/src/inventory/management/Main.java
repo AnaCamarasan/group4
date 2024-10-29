@@ -57,7 +57,7 @@ public class Main {
             case "a": // CREATE
                 orderList.addOrder(productIds, customerIds, productQuantity);
 
-                ordersMenu();
+                mainMenu();
                 break;
 
             case "f": // READ
@@ -74,7 +74,7 @@ public class Main {
                 }
                 System.out.println("PRESS ENTER TO CONTINUE");
                 scanner.nextLine();
-                ordersMenu();
+                mainMenu();
                 break;
 
             case "u": // UPDATE
@@ -85,7 +85,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID ORDER ID");
                 }
-                ordersMenu();
+                mainMenu();
                 break;
 
             case "d": // DELETE
@@ -96,7 +96,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID ORDER ID");
                 }
-                ordersMenu();
+                mainMenu();
                 break;
 
             case "r":
@@ -105,7 +105,7 @@ public class Main {
 
             default:
                 System.out.println("INVALID INPUT. PLEASE INPUT A VALID OPTION.");
-                ordersMenu();
+                mainMenu();
                 break;
         }
     }
@@ -121,7 +121,7 @@ public class Main {
 
             case "a": // CREATE
                 customerList.addCustomer();
-                customersMenu();
+                mainMenu();
                 break;
 
             case "f": // READ
@@ -138,7 +138,7 @@ public class Main {
                 }
                 System.out.println("PRESS ENTER TO CONTINUE");
                 scanner.nextLine();
-                customersMenu();
+                mainMenu();
                 break;
 
             case "u": // UPDATE
@@ -149,7 +149,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID CUSTOMER ID");
                 }
-                customersMenu();
+                mainMenu();
                 break;
 
             case "d": // DELETE
@@ -160,7 +160,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID CUSTOMER ID");
                 }
-                customersMenu();
+                mainMenu();
                 break;
 
             case "r":
@@ -169,7 +169,7 @@ public class Main {
 
             default:
                 System.out.println("INVALID INPUT. PLEASE INPUT A VALID OPTION.");
-                customersMenu();
+                mainMenu();
                 break;
         }
     }
@@ -185,7 +185,7 @@ public class Main {
 
             case "a": // CREATE
                 inventory.addProduct();
-                productsMenu();
+                mainMenu();
                 break;
 
             case "f": // READ
@@ -202,7 +202,7 @@ public class Main {
                 }
                 System.out.println("PRESS ENTER TO CONTINUE");
                 scanner.nextLine();
-                productsMenu();
+                mainMenu();
                 break;
 
             case "u": // UPDATE
@@ -213,7 +213,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID CUSTOMER ID");
                 }
-                productsMenu();
+                mainMenu();
                 break;
 
             case "d": // DELETE
@@ -224,7 +224,7 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("INVALID PRODUCT ID");
                 }
-                productsMenu();
+                mainMenu();
                 break;
 
             case "r":
@@ -233,7 +233,7 @@ public class Main {
 
             default:
                 System.out.println("INVALID INPUT. PLEASE INPUT A VALID OPTION.");
-                productsMenu();
+                mainMenu();
                 break;
         }
     }
