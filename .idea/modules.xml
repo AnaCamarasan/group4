@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AbstractInheritance/AbstractInheritance.iml" filepath="$PROJECT_DIR$/AbstractInheritance/AbstractInheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArraysAndStrings/ArraysAndStrings.iml" filepath="$PROJECT_DIR$/ArraysAndStrings/ArraysAndStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GarageTask/GarageTask.iml" filepath="$PROJECT_DIR$/GarageTask/GarageTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/GoingFutherWithClasses/GoingFutherWithClasses.iml" filepath="$PROJECT_DIR$/GoingFutherWithClasses/GoingFutherWithClasses.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Group4.iml" filepath="$PROJECT_DIR$/.idea/Group4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
