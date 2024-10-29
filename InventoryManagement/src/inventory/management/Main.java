@@ -15,7 +15,12 @@ public class Main {
     public static void mainMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n\tMAIN MENU:");
-        System.out.println("Would you like to view: \n\tOrders (O) \n\tCustomers (C) \n\tProducts (P) \n\tQuit (Q)");
+        System.out.println("""
+                            Would you like to view:\s
+                            \tOrders (O)\s
+                            \tCustomers (C)\s
+                            \tProducts (P)\s
+                            \tQuit (Q)""");
         String userInput = scanner.nextLine();
         switch (userInput.toLowerCase().trim()){
             case "o":
@@ -48,8 +53,13 @@ public class Main {
     public static void customersMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n\tCUSTOMER MENU:");
-        System.out.println("Would you like to: \n\tADD a customer (A) \n\tFIND a customer (F) " +
-                "\n\tUPDATE a customer (U) \n\tDELETE a customer (D) \n\tRETURN to the main menu (R)");
+        System.out.println("""
+                Would you like to:\s
+                \tADD a customer (A)\s
+                \tFIND a customer (F)\s
+                \tUPDATE a customer (U)\s
+                \tDELETE a customer (D)\s
+                \tRETURN to the main menu (R)""");
         String userInput = scanner.nextLine();
         String givenOption;
         switch (userInput.toLowerCase().trim()){
