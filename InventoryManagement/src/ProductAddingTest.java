@@ -1,10 +1,8 @@
 import inventory.management.Inventory;
-import inventory.management.Product;
 
 import java.util.Scanner;
-import java.util.SortedMap;
 
-public class Main {
+public class ProductAddingTest {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         Scanner scanner = new Scanner(System.in);
