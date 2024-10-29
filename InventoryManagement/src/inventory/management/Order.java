@@ -5,12 +5,15 @@ public class Order {
     private int productId;
     private int customerId;
 
+    private int orderQuantity;
+
     private static int nextOrderId = 0;
 
-    public Order(int productId, int customerId) {
+    public Order(int productId, int customerId, int orderQuantity) {
         this.orderId = nextOrderId++;
         this.productId = productId;
         this.customerId = customerId;
+        this.orderQuantity = orderQuantity;
     }
 
     public int getOrderId() {
@@ -33,12 +36,21 @@ public class Order {
         this.customerId = customerId;
     }
 
+    public int getOrderQuantity() {
+        return orderQuantity;
+    }
+
+    public void setOrderQuantity(int orderQuantity) {
+        this.orderQuantity = orderQuantity;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
                 "orderId=" + orderId +
                 ", productId=" + productId +
                 ", customerId=" + customerId +
+                ", orderQuantity=" + orderQuantity +
                 '}';
     }
 }

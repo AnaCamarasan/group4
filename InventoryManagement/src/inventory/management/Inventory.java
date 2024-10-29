@@ -1,6 +1,8 @@
 package inventory.management;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 public class Inventory {
@@ -93,6 +95,14 @@ public class Inventory {
         }
 
         return productIds;
+    }
+
+    public Dictionary<Integer, Integer> getProductQuantity(){
+        Dictionary<Integer, Integer> productQuantity = new Hashtable<>();
+        for (Product p : productInventory) {
+            productQuantity.put(p.getProductId(), p.getQuantityInStock());
+        }
+        return productQuantity;
     }
 
     @Override

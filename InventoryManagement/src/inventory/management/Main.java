@@ -1,6 +1,7 @@
 package inventory.management;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.Scanner;
 
 public class Main {
@@ -50,10 +51,11 @@ public class Main {
 
         ArrayList<Integer> productIds = inventory.getProductIds();
         ArrayList<Integer> customerIds = customerList.getCustomerIds();
+        Dictionary<Integer, Integer> productQuantity = inventory.getProductQuantity();
 
         switch (userInput.toLowerCase().trim()){
             case "a": // CREATE
-                orderList.addOrder(productIds, customerIds);
+                orderList.addOrder(productIds, customerIds, productQuantity);
 
                 ordersMenu();
                 break;

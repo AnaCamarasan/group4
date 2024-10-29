@@ -1,6 +1,7 @@
 package inventory.management;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.Scanner;
 
 public class OrderList {
@@ -10,7 +11,7 @@ public class OrderList {
         this.orderList = new ArrayList<>();
     }
 
-    public void addOrder (ArrayList<Integer> productIds, ArrayList<Integer> customerIds) {
+    public void addOrder (ArrayList<Integer> productIds, ArrayList<Integer> customerIds, Dictionary<Integer, Integer> productQuantity) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input the order's details below:");
 
@@ -37,7 +38,19 @@ public class OrderList {
             }
         }
 
-        Order order = new Order(productId, customerId);
+        boolean validQuantity = false;
+        int orderAmount = -1;
+        while (!validQuantity) {
+            System.out.println("Input the quantity to be ordered: ");
+            orderAmount = scanner.nextInt();
+            if (productQuantity.get(productId) < orderAmount){
+                System.out.println("There is not enough of this item in stock. \n Total in stock: " + productQuantity.get(productId));
+            } else {
+                validQuantity = true;
+            }
+        }
+
+        Order order = new Order(productId, customerId, orderAmount);
         orderList.add(order);
 
         System.out.println("Order successfully added");
@@ -74,6 +87,10 @@ public class OrderList {
                 System.out.println("Customer ID was: '" + o.getCustomerId() + "'");
                 System.out.print("Customer IDs available are: " + customerIds + " Pick one:");
                 o.setCustomerId(scanner.nextInt());
+
+                System.out.println("Order Quantity was: '" + o.getOrderQuantity() + "'");
+                //System.out.print("Customer IDs available are: " + customerIds + " Pick one:");
+                o.setOrderQuantity(scanner.nextInt());
 
                 System.out.println("SUCCESSFULLY UPDATED ORDER.");
                 break;
