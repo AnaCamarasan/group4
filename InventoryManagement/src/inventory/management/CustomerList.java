@@ -67,6 +67,15 @@ public class CustomerList {
         scanner.nextLine();
     }
 
+    public ArrayList<Integer> getCustomerIds () {
+        ArrayList<Integer> customerIds = new ArrayList<>();
+        for (Customer c : customerList) {
+            customerIds.add(c.getCustomerID());
+        }
+
+        return customerIds;
+    }
+
     @Override
     public String toString() {
         return "customerList=" + customerList;

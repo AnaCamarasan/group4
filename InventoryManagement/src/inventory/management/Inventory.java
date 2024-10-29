@@ -86,6 +86,15 @@ public class Inventory {
         scanner.nextLine();
     }
 
+    public ArrayList<Integer> getProductIds () {
+        ArrayList<Integer> productIds = new ArrayList<>();
+        for (Product p : productInventory) {
+            productIds.add(p.getProductId());
+        }
+
+        return productIds;
+    }
+
     @Override
     public String toString() {
         return "Inventory{" +
